@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<header>
-  <img src="background_img.png" alt="Banner" 
-       style="max-width:100%; height:auto; display:block; margin:0 auto;">
-</header>
-  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cindy's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    /* 헤더 배너 */
+    header img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* 네비게이션 메뉴 */
+    nav {
+      text-align: center;
+      background: #fff;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-btn {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #007acc, #00c6ff);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      /* 반응형 폰트: 최소 14px, 기본은 화면폭 1.5vw, 최대 20px */
+      font-size: clamp(14px, 1.5vw, 20px);
+    }
+    .nav-btn:hover {
+      background: linear-gradient(135deg, #005fa3, #0090cc);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: clamp(20px, 2.5vw, 32px); /* 반응형 제목 크기 */
+      margin-top: 0;
+    }
+
+    p, li, a {
+      font-size: clamp(14px, 1.5vw, 18px); /* 반응형 본문 크기 */
+    }
+
+    html {
+      scroll-behavior: smooth; /* 버튼 클릭 시 부드러운 스크롤 */
+    }
+  </style>
+</head>
+
 <body>
-    <section>
+  <!-- 배너 -->
+  <header>
+    <img src="background_img.png" alt="Banner">
+  </header>
+
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="#about" class="nav-btn">About</a>
+    <a href="#projects" class="nav-btn">Projects</a>
+    <a href="#contact" class="nav-btn">Contact</a>
+  </nav>
+
+  <!-- 섹션들 -->
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I'm passionate about People Analytics, HR Tech, and Data Science.
@@ -16,7 +97,7 @@
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li><a href="#">Recruitment Process App (DB Design)</a></li>
@@ -25,7 +106,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
@@ -33,11 +114,3 @@
   </section>
 </body>
 </html>
-
-
-
-
-
-
-
-
